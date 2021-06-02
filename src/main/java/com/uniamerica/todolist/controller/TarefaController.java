@@ -24,6 +24,11 @@ public class TarefaController {
     return tarefaRepository.findAll();
   }
 
+  @GetMapping("/{clienteId}")
+  public List<TarefaEntity> listByClienteId(@PathVariable Long clienteId){
+    return tarefaRepository.findByClienteId(clienteId);
+  }
+
   @PostMapping
   public TarefaEntity save(@RequestBody TarefaEntity tarefa) {
 
