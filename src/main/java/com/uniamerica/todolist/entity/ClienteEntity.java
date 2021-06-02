@@ -1,5 +1,6 @@
 package com.uniamerica.todolist.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,6 +21,7 @@ public class ClienteEntity {
   private Long id;
   private String name;
 
+  @JsonIgnore
   @OneToMany(mappedBy = "cliente")
   private List<TarefaEntity> tarefas;
 }

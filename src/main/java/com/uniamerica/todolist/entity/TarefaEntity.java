@@ -1,6 +1,7 @@
 package com.uniamerica.todolist.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +20,7 @@ public class TarefaEntity {
   @EqualsAndHashCode.Include
   private Long id;
   private String name;
+
 
   @ManyToOne
   private ClienteEntity cliente;
